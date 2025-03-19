@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinx - Merchandise Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Antonio Scripts',;
+            background: linear-gradient(to bottom, #ffb6c1, #ffffff);
+            color: #333;
+            overflow-x: hidden;
+            text-align: center;
+            align-items: center;
+            scroll-behavior:inherit;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            background-color: #ffb6c1;
+            justify-content: center;
+            gap: 20px;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            border-radius: 24px;
+            transition: background 0.3s ease;
+        }
+        .navbar a:hover {
+            background: black;
+            border-radius: 24px;
+            color: #ffb6c1;
+            transition: background 0.3s ease, transform 0.3s ease;
+            transform: scale(1.05);
+        }
+        .section {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            color: #ff4d88;
+            margin-top: -10%;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #ff4d88;
+        }
+        p, li {
+            font-size: 1.2rem;
+        }
+        .about-section, .services-section {
+            padding: 40px;
+            border-radius: 10px;
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+            width: 70%;
+            text-align: center;
+            margin-bottom: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 14%;
+        }
+        .services-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .service-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+        .service-item:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .service-item i {
+            font-size: 2rem;
+            color: #ff4d88;
+        }
+        .merch-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 60%;
+        }
+        .merch-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            color: #ff4d88;
+            padding: 20px;
+            font-size: 1rem;
+        }
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff4d88;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .chat-icon:hover {
+            background: #ff1f6b;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#merch">Merchandise</a>
+    </div>
+    
+    <div id="home" class="section">
+        <h1>This is Blinx</h1>
+        <p>A not-so-official page to check your merchandise...</p>
+    </div>
+    
+    <div id="about" class="section about-section">
+        <h2>About</h2>
+        <p>This page was created to assist fans in checking the merchandise they have availed. Additionally, it integrates a chatbot to provide seamless assistance.</p>
+    </div>
+    
+    <div id="services" class="section services-section">
+        <h2>Services</h2>
+        <div class="services-list">
+            <div class="service-item"><i class="fas fa-search"></i><p>Check Product</p></div>
+            <div class="service-item"><i class="fas fa-shopping-cart"></i><p>Buy a Product</p></div>
+            <div class="service-item"><i class="fas fa-box"></i><p>Check Stocks</p></div>
+        </div>
+    </div>
+    
+    <div id="merch" class="section merch-section">
+        <h2>Merchandise</h2>
+        <div class="merch-item">
+            <h3>Limited Edition Lightstick</h3>
+            <p>Get your official Blackpink lightstick now!</p>
+        </div>
+        <div class="merch-item">
+            <h3>Exclusive Apparel</h3>
+            <p>Wear your bias proudly with our stylish Blackpink merch.</p>
+        </div>
+        <div class="merch-item">
+            <h3>Albums & Photocards</h3>
+            <p>Complete your collection with signed albums and exclusive photo cards.</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 Blinx Merch Fanpage. All rights reserved.</p>
+    </div>
+    
+    <div class="chat-icon">💬</div>
+</body>
+</html>

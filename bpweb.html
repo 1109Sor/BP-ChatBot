@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.72.0">
+  <title>Carousel Template · Bootstrap</title>
+
+  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    /* GLOBAL STYLES
+    --------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      color: #AC1754;
+    }
+    
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------- */
+
+    .carousel-slide{
+      background-color: #AC1754;
+    }
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 4rem;
+    }
+
+    /* Since positioning the image, we need to help out the caption */
+    .carousel-caption {
+      bottom: 3rem;
+      z-index: 10;
+    }
+
+    /* Declare heights because of positioning of img element */
+    .carousel-item {
+      height: 32rem;
+    }
+
+    .carousel-item>img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 32rem;
+    }
+
+    .carousel-indicators li {
+      background-color: pink;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel {
+      background-color: #fff; /* Example: white background color, feel free to change */
+      padding: 20px 0;
+    }
+
+    /* MARKETING CONTENT
+-------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .col-lg-4 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .marketing h2 {
+      font-weight: 400;
+    }
+
+    .marketing .col-lg-4 p {
+      margin-right: .75rem;
+      margin-left: .75rem;
+    }
+
+
+    /* Featurettes
+------------------------- */
+
+    .featurette-divider {
+      margin: 5rem 0;
+      /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -.05rem;
+    }
+
+    /* Add zoom effect on hover for the svg container */
+.svg-image-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.svg-image-container svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.svg-image-container:hover svg {
+  transform: scale(1.1); /* Scale the image by 1.1 when hovering */
+}
+
+/* Optional: Add a subtle shadow effect */
+
+
+    /* RESPONSIVE CSS
+-------------------------------------------------- */
+
+    @media (min-width: 40em) {
+
+      /* Bump up size of carousel content */
+      .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+      }
+
+      .featurette-heading {
+        font-size: 50px;
+      }
+    }
+
+    @media (min-width: 62em) {
+      .featurette-heading {
+        margin-top: 7rem;
+      }
+    }
+
+    .rounded-corners {
+        border-radius: 24px; /* Adjust this value to change how rounded the corners are */
+      }
+
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: black; z-index: 1050;">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color: pink; font-weight: bolder; font-size: 40px;" href="#">BLINX</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#">SIGN-IN</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="border-color: pink; color: pink;">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="background-color: pink; border-color: pink; color: black;">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <rect width="100%" height="100%" fill="#1A1A1D" />
+          </svg>
+      
+          <div class="container">
+            <div class="carousel-caption text-left">
+              <h1 style="font-weight: bold; font-size: 90px; color: pink;">BLINX</h1>
+              <p>Welcome to BLINX, the ultimate destination for fans! 
+                Whether you're looking to buy, view, or check availability for exclusive merchandise...<br><br> 
+                we’ve got you covered.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button" style="background-color: pink; border-color: pink; color: black;">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="carousel-item" >
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <rect width="100%" height="100%" fill="#1A1A1D" />
+          </svg>
+      
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 style="font-weight: bolder; font-size: 90px; color: pink;">For the Ultimate</h1><br><br>
+              <p>Don’t miss your chance to own special items only available here. 
+                These exclusive collectibles are designed for true fans — grab them before they disappear!</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button" style="background-color: pink; border-color: pink; color: black;">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+            <rect width="100%" height="100%" fill="#1A1A1D" />
+          </svg>
+      
+          <div class="container">
+            <div class="carousel-caption text-right">
+              <h1 style="font-weight: bolder;  font-size: 90px; color: pink;">Collect & Celebrate</h1>
+              <p>From stunning special edition albums to unique photocard sets, 
+                our exclusive music collection gives you a deeper connection 
+                to the group. Each item is a piece of legacy.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button" style="background-color: pink; border-color: pink; color: black;">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+<!-- Three columns of text below the carousel -->
+<div class="row">
+  <div class="col-lg-4">
+    <div class="svg-image-container">
+      <svg class="bd-placeholder-img rounded-circle" width="190" height="190" xmlns="http://www.w3.org/2000/svg"
+        aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+        <title>Placeholder</title>
+        <defs>
+          <pattern id="image-pattern" patternUnits="userSpaceOnUse" width="100%" height="100%">
+            <image href="img/hb.png" x="0" y="0" width="100%" height="100%" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#image-pattern)" />
+        <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle"> </text>
+      </svg>
+    </div>
+    <h2>Limited Editions</h2>
+    <p>With only a few available, these collectibles are perfect for true Blinks looking to own a piece of Blackpink history. Hurry, once they’re gone, they’re gone!</p>
+    <p><a class="btn btn-secondary" href="#" role="button" style="background-color: black; color: pink; border-color: black;">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+
+  <div class="col-lg-4">
+    <div class="svg-image-container">
+      <svg class="bd-placeholder-img" width="190" height="190" xmlns="http://www.w3.org/2000/svg"
+        aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+        <title>Placeholder</title>
+        <defs>
+          <pattern id="image-pattern-merchh" patternUnits="userSpaceOnUse" width="100%" height="100%">
+            <image href="img/merchh.png" x="0" y="0" width="100%" height="100%" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#image-pattern-merchh)" />
+        <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle"> </text>
+      </svg>
+    </div>
+    <h2>Exclusive Apparel</h2>
+    <p>From trendy t-shirts to stylish outerwear, each piece is a must-have 
+      for any Blink looking to represent the group in their everyday look.</p>
+    <p><a class="btn btn-secondary" href="#" role="button" style="background-color: black; color: pink; border-color: black;">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+
+  <div class="col-lg-4">
+    <div class="svg-image-container">
+      <svg class="bd-placeholder-img" width="190" height="190" xmlns="http://www.w3.org/2000/svg"
+        aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+        <title>Placeholder</title>
+        <defs>
+          <pattern id="image-pattern-album" patternUnits="userSpaceOnUse" width="100%" height="100%">
+            <image href="img/album.png" x="0" y="0" width="100%" height="100%" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#image-pattern-album)" />
+        <text x="50%" y="50%" fill="#fff" dy=".3em" text-anchor="middle"> </text>
+      </svg>
+    </div>
+    <h2>Albums & Photocards</h2>
+    <p>Don't forget the collectible photocards—each one capturing 
+      the essence of the group members. These items are perfect for 
+      fans who want to celebrate the girls in style and add to their 
+      growing collection.</p>
+    <p><a class="btn btn-secondary" href="#" role="button" style="background-color: black; color: pink; border-color: black;">View details &raquo;</a></p>
+  </div><!-- /.col-lg-4 -->
+</div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">A New Era of Merchandise<span class="text-muted"><br>It’ll blow your mind.</span></h2>
+          <p class="lead">Discover an exclusive collection of premium merchandise that will take your fandom to the next level. From limited-edition apparel to unique collectibles, every piece is crafted with the fan in mind. Whether you're looking for something stylish to wear or a rare item to add to your collection, these exclusive products are a must-have for true fans.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/samples.jpg" alt="Samples Image" class="featurette-image img-fluid mx-auto rounded-corners" width="500" height="500">
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">It’s that good. <span class="text-muted"><br>See for yourself.</span></h2>
+          <p class="lead">Don’t miss your chance to own some of the most coveted merch out there. From sleek apparel to one-of-a-kind accessories, each item is crafted with fans in mind, combining style and comfort. Whether you’re looking for something casual or a statement piece, we’ve got you covered.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="img/merch1.png" alt="Merchandise 1" class="featurette-image img-fluid mx-auto rounded-corners" width="500" height="500">
+        </div>
+      </div>
+      
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Level up your collection. <span class="text-muted"><br>Game Changer.</span></h2>
+          <p class="lead">The ultimate merch collection awaits. With exclusive editions and meticulously crafted pieces, this is your chance to own something rare. These items are more than just merchandise — they’re a part of the culture. Limited availability ensures that only the most dedicated fans can claim them.</p>
+        </div>
+        <div class="col-md-5">
+          <img src="img/merch2.png" alt="Merchandise 2" class="featurette-image img-fluid mx-auto rounded-corners" width="500" height="500">
+        </div>
+      </div>
+      
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2025 - ElSoryuuu Company &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    </footer>
+  </main>
+
+  <script
+  src='//au.fw-cdn.com/20901523/332050.js'
+  chat='true'>
+  </script>
+
+</body>
+
+</html>

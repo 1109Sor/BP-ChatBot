@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    padding-top: 80px; /* Add padding to avoid content being hidden under fixed navbar */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto; 
+}
+
+/* Header Styles */
+.header {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed; /* Fix the navbar to the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #E9762B;
+    text-align: left;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.nav-link {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #94a3b8;
+}
+
+/* Product Section */
+.product-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Increase card size */
+    gap: 25px;
+    justify-content: center; /* Center the grid */
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border-radius: 12px; /* Make the corners rounder */
+    overflow: hidden;
+    max-height: 800px;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1); /* Optional: For smoother hover effect */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.product-image {
+    width: 100%;
+    height: 350px; /* Reduced height for smaller images */
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 30px; /* Add more padding */
+}
+
+.product-name {
+    font-size: 1.75rem; /* Increase font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 1.5rem; /* Increase font size */
+    font-weight: bold;
+    color: #1f2937;
+}
+
+.add-to-cart-btn {
+    background-color: #2563eb;
+    color: #fff;
+    padding: 12px 24px; /* Increase padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+    font-weight: 600;
+}
+</style>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">BYMON</h1>
+        </div>
+    </header>
+
+    <!-- Main Product Section -->
+    <section id="products" class="product-section">
+        <div class="container">
+            <h2 class="section-title">Our Latest Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="img/bm1.png" alt="Product 1" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Babymonster Photo Albums</h3>
+                        <p class="product-price">$29.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="img/bm2.png" alt="Product 2" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Babymonster Light Stick</h3>
+                        <p class="product-price">$39.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="img/bm3.png" alt="Product 3" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Babymonster Apparel</h3>
+                        <p class="product-price">$49.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="img/bm1.png" alt="Product 4" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Babymonster Keychain</h3>
+                        <p class="product-price">$19.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="img/bm2.png" alt="Product 5" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">Babymonster Poster</h3>
+                        <p class="product-price">$15.99</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 BYMON. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
